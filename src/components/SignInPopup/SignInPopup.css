@@ -1,0 +1,237 @@
+.signin__popup__containerImgQuest {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: end;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px; /* 20px */
+}
+
+.signin__popup__containerImgQuest__popup {
+  border-radius: 20px;
+  background:rgba(255, 255, 255, 1) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Применение анимации при открытии */
+.signin__popup__containerImgQuest.fade-in {
+  animation: fadeIn 0.7s forwards;
+}
+
+.signin__popup__containerImgQuest.fade-out {
+  animation: fadeOut 0.7s forwards;
+}
+
+/* Применение анимации для окна */
+.signin__popup__containerImgQuest__popup.slide-up {
+  animation: slideUp 0.7s forwards;
+}
+
+.signin__popup__containerImgQuest__popup.slide-down {
+  animation: slideDown 0.7s forwards;
+}
+
+.signin__popup__containerImgQuest__popup__containerText__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #0077FF;
+}
+
+.signin__popup__containerImgQuest__popup__containerText__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #0077FF80;
+}
+
+.signin__popup__containerImgQuest__popup__containerBtn {
+  display: flex;
+  align-items: end;
+}
+
+.signin__popup__containerImgQuest__popup__containerBtn__btn {
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #0077FF;
+}
+
+
+@media screen and (min-width: 1920px) {
+  
+  .signin__popup__containerImgQuest__popup {
+    width: 865px;
+    height: 258px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText {
+    width: 678px; /* Примерно 356px */
+    height: 149px; /* Примерно 248px */
+    margin-left: 35px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__title {
+    width: 537px;
+    font-size: 25px; /* Примерно 25px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__subtitle {
+    margin-top: 10px; /* Примерно 10px */
+    font-size: 20px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn {
+    height: 248px; /* Примерно 248px */
+    width: 152px; /* Примерно 152px */
+    margin-left: 29px; /* Примерно 29px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn {
+    width: 152px;
+    height: 30px;
+    margin-left: -35px;
+    height: 50px; /* Примерно 50px */
+    font-size: 14px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn__img {
+    width: 30px; /* Примерно 31px */
+    height: 30px; /* Примерно 50px */
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .signin__popup__containerImgQuest__popup {
+    width: 865px;
+    height: 258px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText {
+    width: 678px; /* Примерно 356px */
+    height: 149px; /* Примерно 248px */
+    margin-left: 35px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__title {
+    width: 537px;
+    font-size: 25px; /* Примерно 25px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__subtitle {
+    margin-top: 10px; /* Примерно 10px */
+    font-size: 20px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn {
+    height: 248px; /* Примерно 248px */
+    width: 152px; /* Примерно 152px */
+    margin-left: 29px; /* Примерно 29px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn {
+    width: 152px;
+    height: 30px;
+    margin-left: -35px;
+    height: 50px; /* Примерно 50px */
+    font-size: 14px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn__img {
+    width: 30px; /* Примерно 31px */
+    height: 30px; /* Примерно 50px */
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .signin__popup__containerImgQuest__popup {
+    width: 865px;
+    height: 258px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText {
+    width: 678px; /* Примерно 356px */
+    height: 149px; /* Примерно 248px */
+    margin-left: 35px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__title {
+    width: 537px;
+    font-size: 25px; /* Примерно 25px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__subtitle {
+    margin-top: 10px; /* Примерно 10px */
+    font-size: 20px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn {
+    height: 248px; /* Примерно 248px */
+    width: 152px; /* Примерно 152px */
+    margin-left: 29px; /* Примерно 29px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn {
+    width: 152px;
+    height: 30px;
+    margin-left: -35px;
+    height: 50px; /* Примерно 50px */
+    font-size: 14px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn__img {
+    width: 30px; /* Примерно 31px */
+    height: 30px; /* Примерно 50px */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .signin__popup__containerImgQuest__popup {
+    width: 646px;
+    height: 200px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText {
+    width: 600px; /* Примерно 356px */
+    height: 149px; /* Примерно 248px */
+    margin-left: 35px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__title {
+    width: 537px;
+    font-size: 20px; /* Примерно 25px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerText__subtitle {
+    margin-top: 10px; /* Примерно 10px */
+    font-size: 14px; /* Примерно 20px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn {
+    height: 248px; /* Примерно 248px */
+    width: 152px; /* Примерно 152px */
+    margin-left: 29px; /* Примерно 29px */
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn {
+    width: 147px;
+    height: 25px;
+    font-size: 14px;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+  }
+  
+  .signin__popup__containerImgQuest__popup__containerBtn__btn__img {
+    width: 30px; /* Примерно 31px */
+    height: 30px; /* Примерно 50px */
+  }
+}

@@ -1,0 +1,1290 @@
+@keyframes opIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.admin__start.fade-in {
+  animation: opIn 0.7s ease-in-out forwards;
+}
+
+.admin__start.fade-out {
+  animation: opOut 0.7s ease-in-out forwards;
+}
+
+.admin {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.admin__popup {
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin__start {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin__start__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin__start__header__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #0077ff;
+}
+
+.admin__start__header__title span {
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: #0077ff;
+  border: 3px solid #0077ff;
+  border-radius: 60px;
+}
+
+.admin__start__header__btndel{
+  width: 30px;
+  height: 30px;
+}
+
+.admin__start__header__btndel__img {
+  width: 30px;
+  height: 30px;
+}
+
+.admin__start__header__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #e74b4b;
+}
+
+.admin__start__btns {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.admin__start__btns__input {
+  border-radius: 140px;
+  background: #0077ff;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: white;
+}
+
+.admin__start__btns__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.578);
+}
+
+.admin__start__btns__new {
+  border-radius: 140px;
+  background: #0077ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin__start__btns__new__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.admin__start__btns__person {
+  border-radius: 140px;
+  background: #0077ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin__start__btns__person__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.admin__start__cards {
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.admin__start__cards::-webkit-scrollbar {
+  width: 5px;
+}
+.admin__start__cards::-webkit-scrollbar-track {
+  background: transparent;
+  position: absolute;
+  z-index: 5;
+}
+.admin__start__cards::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 119, 255, 0.561);
+  border-radius: 20px;
+}
+
+.admin__start__cards__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #0077ffc3;
+  display: flex;
+  align-items: center;
+}
+
+.admin__start__cards__card__input {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: 10;
+}
+
+.admin__start__cards__card__input + label {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #0077ff;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.admin__start__cards__card__input:checked + label {
+  background-color: #ffffff; /* Цвет при отметке */
+  border-color: #ffffff;
+}
+
+.admin__start__cards__card__input + label:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.admin__start__cards__card__input:checked + label:before {
+  background-color: #0077ff; /* Цвет галочки */
+}
+
+.admin__start__cards__card__input + label:hover {
+  background-color: #d0d0d0; /* Цвет при наведении */
+}
+
+.admin__start__cards__card__conimg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg, rgba(36, 36, 36, 0) 0%, #0077ff 100%);
+}
+
+.admin__start__cards__card__opcon {
+  text-align: left;
+}
+
+.admin__start__cards__card__opcon__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.admin__start__cards__card__opcon_op {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.admin__start__cards__card__opcon_op__containerone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin__start__cards__card__opcon_op__containerone__text {
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.admin__start__cards__card__opcon_op__containerone__text__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.admin__start__cards__card__opcon_op__containertwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin__start__cards__card__opcon_op__containertwo__text {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.admin__start__cards__card__opcon_op__containertwo__text__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.admin__start__cards__card__opcon_op__containertwo__text__span__diff {
+  display: block;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin__start__cards__card__opcon__btns {
+  display: flex;
+}
+
+.admin__start__cards__card__opcon__btns__btn {
+  background: #fff;
+  border-radius: 140px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #0077ff;
+}
+
+/**/
+.admin__copyrite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+}
+
+.admin__copyrite__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.for768 {
+  display: none;
+}
+
+@media screen and (min-width: 1920px) {
+  @keyframes widthOut {
+    from {
+      width: 1394px;
+      height: 784px;
+    }
+    to {
+      width: 865px;
+      height: 576px;
+    }
+  }
+
+  .admin__popup.fade-out {
+    animation: widthOut 0.7s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .admin__popup {
+    width: 1394px;
+    height: 784px;
+  }
+
+  .admin__start__header {
+    width: 1334px;
+    height: 30px;
+    margin-top: 26px;
+  }
+
+  .admin__start__header__title {
+    font-size: 14px;
+  }
+
+  .admin__start__header__title span {
+    font-size: 14px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 26px;
+  }
+
+  .admin__start__header__btn {
+    width: 281px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .admin__start__header__btn__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns {
+    width: 1334px;
+    height: 50px;
+    margin-top: 23px;
+    gap: 10px;
+  }
+
+  .admin__start__btns__input {
+    width: 971px;
+    height: 50px;
+    padding-left: 30px;
+    font-size: 14px;
+  }
+
+  .admin__start__btns__input::placeholder {
+    font-size: 14px;
+  }
+
+  .admin__start__btns__new {
+    width: 234px;
+    height: 50px;
+  }
+
+  .admin__start__btns__new__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns__new__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__btns__person {
+    width: 180px;
+    height: 50px;
+  }
+
+  .admin__start__btns__person__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns__person__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__cards {
+    padding-bottom: 30px;
+    margin-top: 30px;
+    width: 1340px;
+    gap: 10px;
+  }
+
+  .admin__start__cards__card {
+    width: 662px;
+    height: 185px;
+  }
+
+  .admin__start__cards__card__conimg {
+    width: 190px;
+    height: 185px;
+    left: 1px;
+  }
+
+  .admin__start__cards__card__img {
+    width: 190px;
+    height: 185px;
+    object-fit: cover;
+  }
+
+  .admin__start__cards__card__opcon {
+    width: 382px;
+    height: 145px;
+    margin-left: 30px;
+  }
+
+  .admin__start__cards__card__opcon__title {
+    font-size: 24px;
+  }
+
+  .admin__start__cards__card__opcon_op {
+    height: 70px;
+    margin-top: 5px;
+    gap: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone {
+    height: 70px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text {
+    width: 139px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo {
+    height: 70px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text {
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span {
+    font-size: 14px;
+    margin-left: 10px;
+    width: 175px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span__diff {
+    margin-left: 5px;
+    width: 86px;
+    height: 25px;
+  }
+  .admin__start__cards__card__opcon__btns {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .admin__start__cards__card__opcon__btns__btn {
+    padding: 6px 30px;
+    font-size: 14px;
+  }
+
+  /**/
+  .admin__copyrite {
+    width: 247px;
+    height: 52px;
+    bottom: 40px;
+    gap: 14px;
+  }
+
+  .admin__copyrite__img {
+    width: 212px;
+    height: 22px;
+  }
+
+  .admin__copyrite__text {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  @keyframes widthOut {
+    from {
+      width: 100vw;
+      height: 100vh;
+    }
+    to {
+      width: 865px;
+      height: 576px;
+    }
+  }
+
+  .admin__popup.fade-out {
+    animation: widthOut 0.7s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .admin__popup {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .admin__start__header {
+    width: 1229px;
+    height: 30px;
+    margin-top: 26px;
+  }
+
+  .admin__start__header__title {
+    font-size: 14px;
+  }
+
+  .admin__start__header__title span {
+    font-size: 14px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 26px;
+  }
+
+  .admin__start__header__btn {
+    width: 281px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .admin__start__header__btn__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns {
+    width: 1229px;
+    height: 50px;
+    margin-top: 23px;
+    gap: 10px;
+  }
+
+  .admin__start__btns__input {
+    width: 971px;
+    height: 50px;
+    padding-left: 30px;
+    font-size: 14px;
+  }
+
+  .admin__start__btns__input::placeholder {
+    font-size: 14px;
+  }
+
+  .admin__start__btns__new {
+    width: 234px;
+    height: 50px;
+  }
+
+  .admin__start__btns__new__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns__new__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__btns__person {
+    width: 180px;
+    height: 50px;
+  }
+
+  .admin__start__btns__person__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns__person__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__cards {
+    padding-bottom: 30px;
+    margin-top: 30px;
+    width: 1235px;
+    gap: 10px;
+  }
+
+  .admin__start__cards__card {
+    width: 609px;
+    height: 185px;
+  }
+
+  .admin__start__cards__card__conimg {
+    width: 190px;
+    height: 185px;
+    left: 1px;
+  }
+
+  .admin__start__cards__card__img {
+    width: 190px;
+    height: 185px;
+    object-fit: cover;
+  }
+
+  .admin__start__cards__card__opcon {
+    width: 382px;
+    height: 145px;
+    margin-left: 30px;
+  }
+
+  .admin__start__cards__card__opcon__title {
+    font-size: 24px;
+  }
+
+  .admin__start__cards__card__opcon_op {
+    height: 70px;
+    margin-top: 5px;
+    gap: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone {
+    height: 70px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text {
+    width: 139px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo {
+    height: 70px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text {
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span {
+    font-size: 14px;
+    margin-left: 10px;
+    width: 175px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span__diff {
+    margin-left: 5px;
+    width: 86px;
+    height: 25px;
+  }
+  .admin__start__cards__card__opcon__btns {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .admin__start__cards__card__opcon__btns__btn {
+    padding: 6px 30px;
+    font-size: 14px;
+  }
+
+  /**/
+  .admin__copyrite {
+    display: none;
+    width: 247px;
+    height: 52px;
+    bottom: 40px;
+    gap: 14px;
+  }
+
+  .admin__copyrite__img {
+    width: 212px;
+    height: 22px;
+  }
+
+  .admin__copyrite__text {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  @keyframes widthOut {
+    from {
+      width: 100vw;
+      height: 100vh;
+    }
+    to {
+      width: 865px;
+      height: 576px;
+    }
+  }
+
+  .admin__popup.fade-out {
+    animation: widthOut 0.7s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .admin__popup {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .admin__start__header {
+    width: 974px;
+    height: 30px;
+    margin-top: 26px;
+  }
+
+  .admin__start__header__title {
+    font-size: 14px;
+  }
+
+  .admin__start__header__title span {
+    font-size: 14px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 26px;
+  }
+
+  .admin__start__header__btn {
+    width: 281px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .admin__start__header__btn__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns {
+    width: 974px;
+    height: 50px;
+    margin-top: 23px;
+    gap: 10px;
+  }
+
+  .admin__start__btns__input {
+    width: 537px;
+    height: 50px;
+    padding-left: 30px;
+    font-size: 14px;
+  }
+
+  .admin__start__btns__input::placeholder {
+    font-size: 14px;
+  }
+
+  .admin__start__btns__new {
+    width: 234px;
+    height: 50px;
+  }
+
+  .admin__start__btns__new__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns__new__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__btns__person {
+    width: 180px;
+    height: 50px;
+  }
+
+  .admin__start__btns__person__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__btns__person__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__cards {
+    padding-bottom: 30px;
+    margin-top: 30px;
+    width: 974px;
+    gap: 10px;
+  }
+
+  .admin__start__cards__card {
+    width: 472px;
+    height: 171px;
+  }
+
+  .admin__start__cards__card__conimg {
+    width: 85px;
+    height: 171px;
+    left: -18px;
+  }
+
+  .admin__start__cards__card__img {
+    width: 66px;
+    height: 171px;
+    object-fit: cover;
+  }
+
+  .admin__start__cards__card__opcon {
+    width: 382px;
+    height: 145px;
+    margin-left: 6px;
+  }
+
+  .admin__start__cards__card__opcon__title {
+    font-size: 24px;
+  }
+
+  .admin__start__cards__card__opcon_op {
+    height: 70px;
+    margin-top: 5px;
+    gap: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone {
+    height: 70px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text {
+    width: 139px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo {
+    height: 70px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text {
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span {
+    font-size: 14px;
+    margin-left: 10px;
+    width: 175px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span__diff {
+    margin-left: 5px;
+    width: 86px;
+    height: 25px;
+  }
+  .admin__start__cards__card__opcon__btns {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .admin__start__cards__card__opcon__btns__btn {
+    padding: 6px 30px;
+    font-size: 14px;
+  }
+
+  /**/
+  .admin__copyrite {
+    display: none;
+    width: 247px;
+    height: 52px;
+    bottom: 40px;
+    gap: 14px;
+  }
+
+  .admin__copyrite__img {
+    width: 212px;
+    height: 22px;
+  }
+
+  .admin__copyrite__text {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .for1024 {
+    display: none;
+  }
+  .for768 {
+    display: flex;
+  }
+  @keyframes widthOut {
+    from {
+      width: 100vw;
+      height: 100vh;
+    }
+    to {
+      width: 646px;
+      height: 513px;
+    }
+  }
+
+  @keyframes MenuIn {
+    from {
+      margin-right: -264px;
+    }
+    to {
+      margin-right: 0;
+    }
+  }
+
+  @keyframes MenuOut {
+    from {
+      margin-right: 0;
+    }
+    to {
+      margin-right: -264px;
+    }
+  }
+
+  .admin__popup.fade-out {
+    animation: widthOut 0.7s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .admin__popup {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .admin__start__header {
+    width: 728px;
+    margin-top: 21px;
+  }
+
+  .admin__start__header__title {
+    width: 225px;
+    height: 26px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #0077ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .admin__start__header__title span {
+    width: 41px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .admin__start__btns {
+    width: 728px;
+    height: 48px;
+    margin-top: 16px;
+  }
+
+  .admin__start__btns__input {
+    border-radius: 140px;
+    width: 728px;
+    height: 48px;
+    padding-left: 20px;
+  }
+
+  .admin__start__cards {
+    width: 734px;
+    gap: 14px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .admin__start__cards__card {
+    border-radius: 20px;
+    width: 357px;
+    height: 148px;
+    position: relative;
+  }
+  .admin__start__cards__card_backimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 119, 255, 0.2);
+    border-radius: 20px;
+  }
+  .admin__start__cards__card__conimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(90deg, rgba(36, 36, 36, 0) 0%, #0077ff 100%);
+    border-radius: 20px;
+  }
+
+  .admin__start__cards__card__opcon {
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    left: 18px;
+  }
+
+  .admin__start__cards__card__opcon__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .admin__start__cards__card__opcon_op {
+    margin-top: 10px;
+    width: 269px;
+    height: 50px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone {
+    width: 96px;
+    height: 50px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text {
+    width: 96px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .admin__start__cards__card__opcon_op__containerone__text__span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo {
+    width: 149px;
+    height: 50px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text {
+    width: 149px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+  }
+
+  .admin__start__cards__card__opcon_op__containertwo__text__span__diff {
+    border-radius: 60px;
+    width: 60px;
+    height: 20px;
+    margin-left: 5px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+  .admin__start__cards__card__opcon__btns {
+    margin-top: 10px;
+    width: 282px;
+    height: 30px;
+    justify-content: space-between;
+  }
+  .admin__start__cards__card__opcon__btns__btn {
+    padding: 6px 25px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #0077ff;
+    background: #fff;
+  }
+
+  .admin__start__header__btn {
+    width: 25px;
+    height: 25px;
+  }
+
+  .admin__start__header__btn__img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .admin__popup__menu {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    justify-content: right;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+    opacity: 0;
+  }
+
+  .admin__popup__menu.open {
+    opacity: 1;
+  }
+
+  .admin__popup__menu__popup {
+    border-radius: 20px 0 0 20px;
+    width: 263px;
+    height: 100%;
+    background: #0077ff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    margin-right: -263px;
+  }
+
+  .admin__popup__menu__popup.open {
+    animation: MenuIn 0.7s ease-in-out forwards;
+  }
+
+  .admin__popup__menu__popup.close {
+    animation: MenuOut 0.7s ease-in-out forwards;
+  }
+
+  .admin__popup__menu__popup__btn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 41px;
+    right: 20px;
+  }
+  .admin__popup__menu__popup__btn__img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .admin__popup__menu__popup__con {
+    width: 211px;
+    height: 158px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 17px;
+    margin-bottom: 17px;
+  }
+
+  .admin__popup__menu__popup__con__tip {
+    border: 3px solid #fff;
+    border-radius: 60px;
+    width: 173px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+  }
+  .admin__popup__menu__popup__con__btn {
+    height: 25px;
+    display: flex;
+    align-items: center;
+  }
+
+  .admin__popup__menu__popup__con__btn__img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .admin__popup__menu__popup__con__btn__span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 10px;
+  }
+
+  .admin__popup__menu__popup__con__btn:nth-child(4)
+    .admin__popup__menu__popup__con__btn__span {
+    color: #e74b4b;
+  }
+
+  .admin__copyrite {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: static;
+    z-index: 1;
+  }
+
+  .admin__copyrite__img {
+    width: 131px;
+    height: 13px;
+  }
+
+  .admin__copyrite__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.2);
+    margin-top: 7px;
+    margin-bottom: 20px;
+  }
+}

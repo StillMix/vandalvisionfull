@@ -1,0 +1,166 @@
+.adminnewpassmobile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.adminnewpassmobile.in {
+  opacity: 1;
+}
+
+.adminnewpassmobile.out {
+  opacity: 0;
+}
+
+.adminnewpassmobile__popup {
+  border-radius: 20px;
+  background: #0077FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adminnewpassmobile__popup__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.adminnewpassmobile__popup__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.adminnewpassmobile__popup__form__input {
+  border-radius: 140px;
+  background: #fff;
+  color: #0077FF;
+}
+
+.adminnewpassmobile__popup__form__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adminnewpassmobile__popup__form__container__btn {
+  display: flex;
+  align-items: center;
+}
+
+.adminnewpassmobile__popup__form__container__btn__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #0077FF;
+}
+
+@keyframes popupSlideInMobile {
+  from {
+    margin-bottom: -53vh;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes popupSlideOutMobile {
+  from {
+    margin-bottom: 0;
+  }
+  to {
+    margin-bottom: -53vh;
+  }
+}
+
+@keyframes OpInMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes OpOutMobile {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.adminnewpassmobile {
+  align-items: end;
+}
+.adminnewpassmobile__popup {
+  border-radius: 20px 20px 0 0;
+  width: 100vw;
+  height: 53vh;
+  background: #0077FF;
+}
+
+.adminnewpassmobile__popup.in {
+  animation: popupSlideInMobile 0.7s ease-in-out forwards;
+}
+
+.adminnewpassmobile__popup.out {
+  animation: popupSlideOutMobile 0.7s ease-in-out forwards;
+}
+
+.adminnewpassmobile__popup__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  width: 89vw;
+  font-size: 25px;
+  color: #fff;
+  margin-top: 4.2vh;
+}
+.adminnewpassmobile__popup__subtitle {
+    width: 89vw;
+  margin-top: 1.3vh;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.adminnewpassmobile__popup__form{
+    width: 89vw;
+}
+
+.adminnewpassmobile__popup__form__input {
+  border-radius: 140px;
+  width: 89vw;
+  height: 6vh;
+  margin-top: 3vh;
+  padding-left: 30px;
+}
+
+.adminnewpassmobile__popup__form__container{
+    display: block;
+}
+
+.adminnewpassmobile__popup__form__container__btn {
+  border-radius: 140px;
+  width: 89vw;
+  height: 5.7vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vh;
+}
+
+.adminnewpassmobile__popup__form__container__btn__img {
+  display: none;
+}

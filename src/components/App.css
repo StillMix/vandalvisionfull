@@ -1,0 +1,79 @@
+@keyframes heightExpand {
+    from {
+      height: 36px;
+    }
+    to {
+      height: 240px;
+    }
+  }
+  
+  @keyframes heightCollapse {
+    from {
+      height: 240px;
+    }
+    to {
+      height: 36px;
+    }
+  }
+  
+  .social-icons {
+    width: 35.86px;
+    background: #ffffff;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравниваем элементы по верху */
+    justify-content: space-around; /* Равномерное распределение элементов */
+    gap: 6px; /* Адаптированный gap */
+    position: absolute;
+    top: 50%;
+    left: 2vw;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    transition: height 0.5s ease;
+    overflow: hidden;
+    padding-top: 3px;
+  }
+  
+  .icon {
+    width: 30px;
+    height: auto; /* Убираем фиксированную высоту */
+    opacity: 0; /* Скрыты по умолчанию */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .icon:first-of-type{
+    opacity: 1;
+  }
+  
+  .social-icons:hover {
+    height: 240px; /* Увеличиваем высоту контейнера */
+  }
+  
+  .social-icons:hover .icon {
+    opacity: 1; /* Показываем элементы при наведении */
+    transform: translateY(0); /* Возвращаем элементы на место */
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .icon:hover .tooltip,
+  .full:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  

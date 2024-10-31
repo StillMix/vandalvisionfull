@@ -1,0 +1,854 @@
+.main__imgs__op__container__btns__back {
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.main__imgs__op__container__btns__fullscreen {
+  background: transparent;
+  color: #fff;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.main__imgs {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Позволяет содержимому выходить за пределы контейнера */
+  border-radius: 20px;
+  position: relative;
+}
+
+.main__imgs__img {
+  z-index: 2;
+  border-radius: 20px;
+  object-fit: cover;
+  position: absolute; /* Делает изображение независимым от родительского контейнера */
+  transform-origin: center; /* Осуществляет анимацию от центра */
+  transition: object-fit 0.8s ease;
+}
+
+.main__imgs__op {
+  position: absolute;
+  z-index: 2;
+  border-radius: 20px; /* Примерно 20px на экране 1920px */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(0deg, #0077ff 0%, rgba(28, 28, 28, 0) 100%);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.main__imgs__op__container__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.main__imgs__op__container__opcon__card {
+  display: flex;
+  align-items: center;
+}
+
+.main__imgs__op__container__opcon__card span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.main__imgs__op__container__opcon__card span span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 60px;
+  background: #a83939;
+}
+
+.main__imgs__op__container__opcon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main__imgs__op__container__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1920px) {
+  @keyframes opInImg {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes opOutImg {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes openImgContainer {
+    0% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 865px;
+      height: 576px;
+    }
+    100% {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+  }
+
+
+  @keyframes openImgFull {
+    0% {
+      width: 865px;
+      height: 576px;
+
+    }
+   
+    100% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+  }
+
+
+  @keyframes closeImgFull {
+    0% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+    40%{
+      object-fit: cover;
+    }
+    100% {
+      width: 865px;
+      height: 576px;
+      object-fit: cover;
+    }
+  
+  }
+
+
+
+  @keyframes closeImgContainer {
+    0% {
+      background: transparent;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+    100% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 865px;
+      height: 576px;
+  
+    }
+  }
+
+
+
+  .main__popup.closeImg {
+    animation: closeImgContainer 1s linear forwards;
+
+  }
+
+  .main__popup.openImg {
+    background-color: transparent;
+    animation: openImgContainer 1s linear forwards;
+    animation-delay: 1s;
+  }
+
+  .main__imgs__op.closeImg {
+    animation: opInImg 1s linear forwards;
+  }
+
+  .main__imgs__op.openImg {
+    animation: opOutImg 1s linear forwards;
+  }
+
+  .main__imgs__img.openImg {
+    animation: openImgFull 1s linear forwards;
+  }
+
+  .main__imgs__img.closeImg {
+    animation: closeImgFull 1s linear forwards;
+
+  }
+
+  .main__imgs__op__container__btns__back span {
+    margin-left: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__back__img,
+  .main__imgs__op__container__btns__fullscreen__img {
+    width: 30px; /* Примерно 30px на экране 1920px */
+    height: 30px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__fullscreen {
+    bottom: 20px; /* Примерно 20px на экране 1080px */
+    right: 20px; /* Примерно 20px на экране 1920px */
+  }
+
+  .main__imgs {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main__imgs__img {
+    width: 865px; /* Установите начальный размер изображения */
+    height: 576px;
+  }
+
+  .main__imgs__op {
+    width: 100%; /* Примерно 865px на экране 1920px */
+    height: 100%;
+  }
+
+  .main__imgs__op__container {
+    width: 805px; /* Примерно 805px на экране 1920px */
+    height: 180px; /* Примерно 180px на экране 1080px */
+    margin-bottom: 30px; /* Примерно 30px на экране 1080px */
+  }
+
+  .main__imgs__op__container__title {
+    font-size: 40px; /* Примерно 40px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card {
+    height: 30px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card:last-child {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 5px; /* Примерно 5px на экране 1920px */
+    padding: 4px 10px; /* Примерно 4px 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+    width: 411px; /* Примерно 411px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns {
+    width: 177px; /* Примерно 177px на экране 1920px */
+    height: 30px; /* Примерно 30px на экране 1920px */
+    margin-top: 20px; /* Примерно 20px на экране 1920px */
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  @keyframes opInImg {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes opOutImg {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes openImgContainer {
+    0% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 865px;
+      height: 576px;
+    }
+    100% {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+  }
+
+
+  @keyframes openImgFull {
+    0% {
+      width: 865px;
+      height: 576px;
+
+    }
+   
+    100% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+  }
+
+
+  @keyframes closeImgFull {
+    0% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+    40%{
+      object-fit: cover;
+    }
+    100% {
+      width: 865px;
+      height: 576px;
+      object-fit: cover;
+    }
+  
+  }
+
+
+
+  @keyframes closeImgContainer {
+    0% {
+      background: transparent;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+    100% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 865px;
+      height: 576px;
+  
+    }
+  }
+
+
+
+  .main__popup.closeImg {
+    animation: closeImgContainer 1s linear forwards;
+
+  }
+
+  .main__popup.openImg {
+    background-color: transparent;
+    animation: openImgContainer 1s linear forwards;
+    animation-delay: 1s;
+  }
+
+  .main__imgs__op.closeImg {
+    animation: opInImg 1s linear forwards;
+  }
+
+  .main__imgs__op.openImg {
+    animation: opOutImg 1s linear forwards;
+  }
+
+  .main__imgs__img.openImg {
+    animation: openImgFull 1s linear forwards;
+  }
+
+  .main__imgs__img.closeImg {
+    animation: closeImgFull 1s linear forwards;
+
+  }
+
+
+
+  .main__imgs__op__container__btns__back span {
+    margin-left: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__back__img,
+  .main__imgs__op__container__btns__fullscreen__img {
+    width: 30px; /* Примерно 30px на экране 1920px */
+    height: 30px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__fullscreen {
+    bottom: 20px; /* Примерно 20px на экране 1080px */
+    right: 20px; /* Примерно 20px на экране 1920px */
+  }
+
+  .main__imgs {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+  .main__imgs__op {
+    width: 100%; /* Примерно 865px на экране 1920px */
+    height: 100%;
+  }
+
+  .main__imgs__op__container {
+    width: 805px; /* Примерно 805px на экране 1920px */
+    height: 180px; /* Примерно 180px на экране 1080px */
+    margin-bottom: 30px; /* Примерно 30px на экране 1080px */
+  }
+
+  .main__imgs__op__container__title {
+    font-size: 40px; /* Примерно 40px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card {
+    height: 30px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card:last-child {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 5px; /* Примерно 5px на экране 1920px */
+    padding: 4px 10px; /* Примерно 4px 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+    width: 411px; /* Примерно 411px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns {
+    width: 177px; /* Примерно 177px на экране 1920px */
+    height: 30px; /* Примерно 30px на экране 1920px */
+    margin-top: 20px; /* Примерно 20px на экране 1920px */
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  @keyframes opInImg {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes opOutImg {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes openImgContainer {
+    0% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 865px;
+      height: 576px;
+    }
+    100% {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+  }
+
+
+  @keyframes openImgFull {
+    0% {
+      width: 865px;
+      height: 576px;
+
+    }
+   
+    100% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+  }
+
+
+  @keyframes closeImgFull {
+    0% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+    40%{
+      object-fit: cover;
+    }
+    100% {
+      width: 865px;
+      height: 576px;
+      object-fit: cover;
+    }
+  
+  }
+
+
+
+  @keyframes closeImgContainer {
+    0% {
+      background: transparent;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+    100% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 865px;
+      height: 576px;
+  
+    }
+  }
+
+
+
+  .main__popup.closeImg {
+    animation: closeImgContainer 1s linear forwards;
+
+  }
+
+  .main__popup.openImg {
+    background-color: transparent;
+    animation: openImgContainer 1s linear forwards;
+    animation-delay: 1s;
+  }
+
+  .main__imgs__op.closeImg {
+    animation: opInImg 1s linear forwards;
+  }
+
+  .main__imgs__op.openImg {
+    animation: opOutImg 1s linear forwards;
+  }
+
+  .main__imgs__img.openImg {
+    animation: openImgFull 1s linear forwards;
+  }
+
+  .main__imgs__img.closeImg {
+    animation: closeImgFull 1s linear forwards;
+
+  }
+
+  .main__imgs__op__container__btns__back span {
+    margin-left: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__back__img,
+  .main__imgs__op__container__btns__fullscreen__img {
+    width: 30px; /* Примерно 30px на экране 1920px */
+    height: 30px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__fullscreen {
+    bottom: 20px; /* Примерно 20px на экране 1080px */
+    right: 20px; /* Примерно 20px на экране 1920px */
+  }
+
+  .main__imgs {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main__imgs__img {
+    width: 865px; /* Установите начальный размер изображения */
+    height: 576px;
+  }
+
+  .main__imgs__op {
+    width: 100%; /* Примерно 865px на экране 1920px */
+    height: 100%;
+  }
+
+  .main__imgs__op__container {
+    width: 805px; /* Примерно 805px на экране 1920px */
+    height: 180px; /* Примерно 180px на экране 1080px */
+    margin-bottom: 30px; /* Примерно 30px на экране 1080px */
+  }
+
+  .main__imgs__op__container__title {
+    font-size: 40px; /* Примерно 40px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card {
+    height: 30px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card:last-child {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 5px; /* Примерно 5px на экране 1920px */
+    padding: 4px 10px; /* Примерно 4px 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+    width: 411px; /* Примерно 411px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns {
+    width: 177px; /* Примерно 177px на экране 1920px */
+    height: 30px; /* Примерно 30px на экране 1920px */
+    margin-top: 20px; /* Примерно 20px на экране 1920px */
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  @keyframes opInImg {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes opOutImg {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+
+  @keyframes openImgContainer {
+    0% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 865px;
+      height: 576px;
+    }
+    100% {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+  }
+
+
+  @keyframes openImgFull {
+    0% {
+      width: 865px;
+      height: 576px;
+
+    }
+   
+    100% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+  }
+
+
+  @keyframes closeImgFull {
+    0% {
+      width: 100vh;
+      height: 100vh;
+      object-fit: contain;
+    }
+    40%{
+      object-fit: cover;
+    }
+    100% {
+      width: 646px;
+      height: 513px;
+      object-fit: cover;
+    }
+  
+  }
+
+
+
+  @keyframes closeImgContainer {
+    0% {
+      background: transparent;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: contain;
+      display: none;
+    }
+    100% {
+      z-index: 600;
+      border-radius: 20px;
+      width: 646px;
+      height: 513px;
+  
+    }
+  }
+
+
+
+  .main__popup.closeImg {
+    animation: closeImgContainer 1s linear forwards;
+
+  }
+
+  .main__popup.openImg {
+    background-color: transparent;
+    animation: openImgContainer 1s linear forwards;
+    animation-delay: 1s;
+  }
+
+  .main__imgs__op.closeImg {
+    animation: opInImg 1s linear forwards;
+  }
+
+  .main__imgs__op.openImg {
+    animation: opOutImg 1s linear forwards;
+  }
+
+  .main__imgs__img.openImg {
+    animation: openImgFull 1s linear forwards;
+  }
+
+  .main__imgs__img.closeImg {
+    animation: closeImgFull 1s linear forwards;
+
+  }
+
+
+
+  .main__imgs__op__container__btns__back span {
+    margin-left: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__back__img,
+  .main__imgs__op__container__btns__fullscreen__img {
+    width: 30px; /* Примерно 30px на экране 1920px */
+    height: 30px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns__fullscreen {
+    bottom: 20px; /* Примерно 20px на экране 1080px */
+    right: 20px; /* Примерно 20px на экране 1920px */
+  }
+
+  .main__imgs {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main__imgs__img {
+    width: 646px;
+    height: 513px;
+  }
+
+  .main__imgs__op {
+    width: 100%; /* Примерно 865px на экране 1920px */
+    height: 100%;
+    justify-content: left;
+    padding-left: 20px;
+  }
+
+  .main__imgs__op__container {
+    width: 367px;
+    height: 152px; /* Примерно 180px на экране 1080px */
+    margin-bottom: 20px; /* Примерно 30px на экране 1080px */
+  }
+
+  .main__imgs__op__container__title {
+    font-size: 30px; /* Примерно 40px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card {
+    height: 25px; /* Примерно 30px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card:last-child {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 4px; /* Примерно 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon__card span span {
+    font-size: 14px; /* Примерно 14px на экране 1920px */
+    margin-left: 5px; /* Примерно 5px на экране 1920px */
+    padding: 4px 10px; /* Примерно 4px 10px на экране 1920px */
+  }
+
+  .main__imgs__op__container__opcon {
+    margin-top: 10px; /* Примерно 10px на экране 1920px */
+    width: 411px; /* Примерно 411px на экране 1920px */
+  }
+
+  .main__imgs__op__container__btns {
+    width: 320px; /* Примерно 177px на экране 1920px */
+    height: 35px; /* Примерно 30px на экране 1920px */
+    margin-top: 20px; /* Примерно 20px на экране 1920px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main__imgs__op__container__btns__fullscreen {
+    position: static;
+  }
+}
+
+
+
+.bck{
+  background: #ffffff;
+}

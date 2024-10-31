@@ -1,0 +1,81 @@
+@keyframes blink {
+  0%,
+  100% {
+    color: rgba(0, 119, 255, 0.2);
+  }
+  50% {
+    color: #0077FF;
+  }
+}
+
+.mainmobile__loading__title__span {
+  margin-left: 10px; /* Примерно 10px на экране 1920px */
+  animation: blink 2s infinite forwards;
+}
+
+.mainmobile__loading__title__span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+/* Задайте задержку для каждой точки */
+.mainmobile__loading__title__span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.mainmobile__loading__title__span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.mainmobile__loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  border-radius: 20px; /* 20px на экране 1920px */
+}
+
+.mainmobile__loading__title {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 15px;
+  color: #0077FF33;
+}
+
+.mainmobile__loading__title__img {
+  width: 40px; /* Примерно 40px на экране 1920px */
+  height: 40px; /* Примерно 40px на экране 1920px */
+}
+
+.mainmobile__loading__title__span__title {
+  margin-left: 10px; /* Примерно 10px на экране 1920px */
+  color: #0077FF;
+}
+
+.mainmobile__loading__err {
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  position: absolute;
+  bottom: 30px; /* Примерно 30px на экране 1080px */
+  width: 293px;
+  height: 54px;
+}
+
+.mainmobile__loading__err__img {
+  width: 30px; /* Примерно 30px на экране 1920px */
+  height: 30px; /* Примерно 30px на экране 1920px */
+}
+
+.mainmobile__loading__err span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px на экране 1920px */
+  color: #0077FF66;
+  margin-left: 10px;
+}

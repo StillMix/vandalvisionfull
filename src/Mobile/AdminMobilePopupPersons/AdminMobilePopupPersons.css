@@ -1,0 +1,439 @@
+@keyframes popupSlideInMobile {
+  from {
+    margin-bottom: -37vh;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes popupSlideOutMobile {
+  from {
+    margin-bottom: 0;
+  }
+  to {
+    margin-bottom: -37vh;
+  }
+}
+
+@keyframes personSlideInMobile {
+  from {
+    margin-top: 100vh;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes personSlideOutMobile {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 100vh;
+  }
+}
+
+@keyframes OpInMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes OpOutMobile {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.adminpopuppersonmobile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.adminpopuppersonmobile.in {
+  opacity: 1;
+}
+
+.adminpopuppersonmobile.out {
+  opacity: 0;
+}
+
+.adminpopuppersonmobile__popup {
+  background: #0077FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.adminpopuppersonmobile__popup.in {
+  animation: personSlideInMobile 0.8s ease-in-out forwards;
+}
+.adminpopuppersonmobile__popup.out {
+  animation: personSlideInMobile 0.8s ease-in-out forwards;
+}
+
+.adminpopuppersonmobile__popup__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adminpopuppersonmobile__popup__header__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.adminpopuppersonmobile__popup__header__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adminpopuppersonmobile__popup__header__btn__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.adminpopuppersonmobile__popup__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adminpopuppersonmobile__popup__inputs__input {
+  border-radius: 140px;
+  background: #fff;
+  color: #0077FF;
+}
+
+.adminpopuppersonmobile__popup__inputs__btn {
+  border-radius: 140px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminpopuppersonmobile__popup__inputs__btn__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #0077FF;
+}
+.adminpopuppersonmobile__popup__cards {
+  overflow-y: scroll;
+}
+
+.adminpopuppersonmobile__popup__cards table {
+  border-collapse: collapse;
+}
+
+.adminpopuppersonmobile__popup__cards table thead th {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: left;
+  border-bottom: 2px solid rgba(217, 217, 217, 0.1);
+}
+
+.adminpopuppersonmobile__popup__cards table thead th:last-of-type {
+  text-align: right;
+}
+
+.adminpopuppersonmobile__popup__cards table tbody tr td:nth-child(1) {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+  padding: 0; /* Убираем паддинг */
+  line-height: 30px; /* Устанавливаем высоту строки текста */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; /* Запретить перенос строки */
+}
+.adminpopuppersonmobile__popup__cards table tbody tr td:nth-child(2) {
+  font-family: var(--font-family);
+  height: 30px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 30px;
+  padding: 0;
+}
+
+.adminpopuppersonmobile__popup__cards table tbody tr td:nth-child(3) {
+  text-align: right;
+}
+
+.adminpopuppersonmobile__popup__cards table tbody tr td:nth-child(3) button {
+  text-align: right;
+  display: inline-block;
+  padding: 0;
+}
+
+.adminpopuppersonmobile__popup__cards table tbody tr td:nth-child(3) button img {
+  vertical-align: middle;
+}
+
+.adminpopuppersonmobile__popup__cards table tbody tr td:nth-child(3) button span {
+  vertical-align: middle;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.adminpopuppersonmobile__popup__cards
+  table
+  tbody
+  tr
+  td:nth-child(3)
+  button:last-of-type
+  span {
+  vertical-align: middle;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #e74b4b;
+}
+
+.adminpopuppersonmobile__popup__header {
+  border-radius: 140px;
+  width: 88.89vw;
+  margin-top: 2vh;
+}
+
+.adminpopuppersonmobile__popup__header__title {
+  font-size: 14px;
+}
+
+.adminpopuppersonmobile__popup__header__btn {
+  width: 147px;
+  height: 24px;
+}
+
+.adminpopuppersonmobile__popup__header__btn__img {
+  width: 24px;
+  height: 24px;
+}
+
+.adminpopuppersonmobile__popup__header__btn__span {
+  font-size: 14px;
+}
+
+.adminpopuppersonmobile__popup__inputs {
+    display: block;
+    width: 88.89vw;
+  margin-top: 2vh;
+}
+
+.adminpopuppersonmobile__popup__inputs__input {
+  width: 100%;
+  height: 6.25vh;
+  padding-left: 30px;
+}
+
+.adminpopuppersonmobile__popup__inputs__btn {
+    width: 100%;
+    height: 6.25vh;
+    margin-top: 1vh;
+}
+
+.adminpopuppersonmobile__popup__inputs__btn__img {
+  width: 30px;
+  height: 30px;
+}
+
+.adminpopuppersonmobile__popup__inputs__btn__span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.adminpopuppersonmobile__popup__cards {
+    width: 88.89vw;
+  margin-top: 2vh;
+  max-height: 71vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+.adminpopuppersonmobile__popup__cards__err {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminpopuppersonmobile__popup__cards__err__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.adminpopuppersonmobile__popup__cards__card {
+  position: relative;
+  width: 88.89vw;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+}
+
+.adminpopuppersonmobile__popup__cards__card__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  width: 98px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.adminpopuppersonmobile__popup__cards__card__title__bck {
+  width: 81px;
+  height: 26px;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(90deg, rgba(36, 36, 36, 0) 0%, #0077FF 100%);
+}
+
+.adminpopuppersonmobile__popup__cards__card__subtitle {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 60px;
+  width: 41px;
+  height: 26px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminpopuppersonmobile__popup__cards__card__btn {
+  border-radius: 60px;
+  width: 194px;
+  height: 26px;
+  background: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #0077FF;
+  margin-left: 11px;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__bck {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  align-items: end;
+  opacity: 0;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__bck.in {
+  animation: OpInMobile 0.8s ease-in-out forwards;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__bck.out {
+  animation: OpOutMobile 0.8s ease-in-out forwards;
+}
+
+.adminpopuppersonmobile__popup__popupmenu {
+  border-radius: 20px 20px 0 0;
+  width: 100vw;
+  height: 37vh;
+  background: #0077FF;
+  display: flex;
+  margin-bottom: -284px;
+  flex-direction: column;
+  position: relative;
+}
+.adminpopuppersonmobile__popup__popupmenu.in {
+  animation: popupSlideInMobile 0.7s ease-in-out forwards;
+}
+
+.adminpopuppersonmobile__popup__popupmenu.out {
+  animation: popupSlideOutMobile 0.7s ease-in-out forwards;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__login {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 5vh;
+}
+.adminpopuppersonmobile__popup__popupmenu__tip {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__btn {
+  width: 225px;
+  height: 25px;
+  margin-top: 1.3vh;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__btn__img {
+  height: 25px;
+  width: 25px;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__btn__span {
+  margin-left: 8px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__btn:first-of-type {
+  margin-top: 2vh;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__btn:nth-child(3)
+  .adminpopuppersonmobile__popup__popupmenu__btn__span {
+  color: #e74b4b;
+}
+
+.adminpopuppersonmobile__popup__popupmenu__btn__back {
+  border-radius: 140px;
+  width: 40vh;
+  height: 6vh;
+  background: #fff;
+  margin-left: 20px;
+  margin-top: 1.2vh;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #0077FF;
+}

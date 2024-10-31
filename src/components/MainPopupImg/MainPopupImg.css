@@ -1,0 +1,158 @@
+.popupOpenImg {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 501;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 119, 255, 0.8); /* Темный фон для лучшего фокуса на изображении */
+  overflow: hidden; /* Убираем прокрутку */
+}
+
+.sliderContainer {
+  display: flex;
+  transition: transform 0.8s ease; /* Плавный переход для слайдера */
+}
+
+
+.popupOpenImg__img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  opacity: 0; /* Начальное состояние: скрыто */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: scale(0.95); /* Начальный масштаб для плавной анимации */
+}
+
+.popupOpenImg__img.active {
+  opacity: 1; /* Активное изображение видно */
+  transform: scale(1); /* Полный размер активного изображения */
+}
+
+
+
+
+
+.sliderControls {
+  position: absolute;
+  top: 50%; /* Позиционируем элемент на 50% от верхней границы */
+  left: 0; /* Прижимаем к левому краю */
+  width: 100%; /* Ширина на 100% */
+  display: flex; /* Используем flex для горизонтального выравнивания */
+  justify-content: space-between; /* Распределяем элементы по краям */
+  padding: 0 40px; /* Добавляем отступы */
+  transform: translateY(-50%); /* Смещаем элемент вверх на 50% его высоты */
+}
+
+.sliderBtn {
+  background-color: rgba(0, 119, 255, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.sliderBtn__arrowright{
+  rotate: 180deg;
+}
+
+.popupOpenImg__op__containerBtn__btn {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+}
+
+.popupOpenImg__op__containerBtn__btn__img {
+  width: 30px;
+  height: 30px;
+}
+
+.popupOpenImg__op__containerBtn__btn span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+
+
+.popupOpenImg__op__containerBtn__btndown{
+  background: transparent;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+}
+
+
+.popupOpenImg__op__containerBtn__btndown span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .popupOpenImg__op__containerBtn__btn {
+    background: #e74b4b;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    align-items: center;
+    height: 30px;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+  }
+
+  .popupOpenImg__op__containerBtn__btndown{
+    background: #e74b4b;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    align-items: center;
+    height: 30px;
+    position: absolute;
+    bottom: 65px;
+    right: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .popupOpenImg__op__containerBtn__btn {
+    background: #e74b4b;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    height: 30px;
+    position: absolute;
+    bottom: 60px;
+    right: 40px;
+  }
+
+  .popupOpenImg__op__containerBtn__btndown{
+    background: #e74b4b;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+  }
+}

@@ -1,0 +1,63 @@
+
+.AdminDel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease; /* Плавный переход для изменения opacity */
+  }
+  
+  .AdminDel.in {
+    opacity: 1;
+  }
+  
+  .AdminDel.out {
+    opacity: 0;
+  }
+  
+  .AdminDel__popup {
+    border-radius: 20px;
+    background: #0077ff;
+    width: 746px;
+    height: 307px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .AdminDel__popup__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .AdminDel__popup__bck {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+
+  .AdminDel__popup__del{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+

@@ -1,0 +1,137 @@
+.adminnewpersonmobile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+  
+  .adminnewpersonmobile.in {
+    opacity: 1;
+  }
+  
+  .adminnewpersonmobile.out {
+    opacity: 0;
+  }
+  
+  .adminnewpersonmobile__popup {
+    border-radius: 20px;
+    background: #0077FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .adminnewpersonmobile__popup__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .adminnewpersonmobile__popup__subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .adminnewpersonmobile__popup__form__input {
+    border-radius: 140px;
+    background: #fff;
+    color: #0077FF;
+  }
+  
+  .adminnewpersonmobile__popup__form__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .adminnewpersonmobile__popup__form__container__btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .adminnewpersonmobile__popup__form__container__btn__span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: #0077FF;
+  }
+  
+ 
+  
+
+
+    .adminnewpersonmobile {
+      align-items: end;
+    }
+    .adminnewpersonmobile__popup {
+      border-radius: 20px 20px 0 0;
+      width: 100vw;
+      height: 50vh;
+    }
+  
+    .adminnewpersonmobile__popup__title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 25px;
+      color: #fff;
+      width: 89vw;
+      margin-top: 3vh;
+    }
+  
+    .adminnewpersonmobile__popup__subtitle {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.5);
+      width: 89vw;
+      margin-top: 0vh;
+    }
+  
+    .adminnewpersonmobile__popup__form {
+        width: 89vw;
+      margin-top: 2vh;
+    }
+  
+    .adminnewpersonmobile__popup__form__input {
+      width: 100%;
+      height: 7vh;
+      padding-left: 30px;
+    }
+  
+    .adminnewpersonmobile__popup__form__input:nth-child(2) {
+      margin-top: 10px;
+    }
+  
+    .adminnewpersonmobile__popup__form__container {
+      margin-top: 0.6vh;
+      width: 89vw;
+      display: block;
+    }
+  
+    .adminnewpersonmobile__popup__form__container__btn {
+      border-radius: 140px;
+      width: 89vw;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 6vh;
+      margin-top: 1vh;
+    }
+  
+    .adminnewpersonmobile__popup__form__container__btn__img {
+      display: none;
+    }
+  
+    .adminnewpersonmobile__popup__form__container__btn__span {
+      font-size: 14px;
+      margin-left: 4px;
+    }
+  

@@ -1,0 +1,291 @@
+
+@keyframes opInImgMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opOutImgMobile {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpImg {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideDownImg {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+@keyframes openImgMobileContainer {
+  0% {
+    z-index: 600;
+    border-radius: 20px;
+    width: 865px;
+    height: 576px;
+  }
+  100% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    object-fit: contain;
+    display: none;
+  }
+}
+
+
+@keyframes openImgFullMobile {
+  0% {
+    width: 865px;
+    height: 576px;
+
+  }
+ 
+  100% {
+    width: 100vh;
+    height: 100vh;
+    object-fit: contain;
+  }
+}
+
+
+@keyframes closeImgFullMobile {
+  0% {
+    width: 100vh;
+    height: 100vh;
+    object-fit: contain;
+  }
+  40%{
+    object-fit: cover;
+  }
+  100% {
+    width: 100vw;
+    height: 576px;
+    object-fit: cover;
+  }
+
+}
+
+
+
+@keyframes closeImgMobileContainer {
+  0% {
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    object-fit: contain;
+    display: none;
+  }
+  100% {
+    z-index: 600;
+    border-radius: 20px;
+    width: 100vw;
+    height: 576px;
+
+  }
+}
+
+
+
+.mainmobile__popup.closeImgMobile {
+  animation: closeImgMobileContainer 1s linear forwards;
+
+}
+
+.mainmobile__popup.openImgMobile {
+  background-color: transparent;
+  animation: openImgMobileContainer 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.mainmobile__imgs__op.closeImgMobile {
+  animation: opInImgMobile 1s linear forwards;
+}
+
+.mainmobile__imgs__op.openImgMobile {
+  animation: opOutImgMobile 1s linear forwards;
+}
+
+.mainmobile__imgs__img.openImgMobile {
+  animation: openImgFullMobile 1s linear forwards;
+}
+
+.mainmobile__imgs__img.closeImgMobile {
+  animation: closeImgFullMobile 1s linear forwards;
+
+}
+
+
+
+.mainmobile__imgs {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* Позволяет содержимому выходить за пределы контейнера */
+  border-radius: 20px;
+  width: 100vw;
+  height: 576px;
+  position: relative;
+}
+
+.mainmobile__imgs__img {
+  z-index: 2;
+  border-radius: 20px;
+  width: 100vw;
+  height: 576px;
+  object-fit: cover;
+  position: absolute; /* Делает изображение независимым от родительского контейнера */
+  transform-origin: center; /* Осуществляет анимацию от центра */
+}
+
+.mainmobile__imgs__op {
+  position: absolute;
+  z-index: 2;
+  border-radius: 20px; /* Примерно 20px на экране 1920px */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(0deg, #0077FF 0%, rgba(28, 28, 28, 0) 100%);
+  display: flex;
+  padding-left: 17px;
+  justify-content: end;
+  flex-direction: column;
+  width: 100vw;
+  height: 576px;
+}
+
+.mainmobile__imgs__op.slideDownImg {
+  animation: opIn 0.5s forwards;
+}
+
+.mainmobile__imgs__op.slideUpImg {
+  animation: opOut 0.5s forwards;
+}
+
+.mainmobile__imgs__op__container__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
+  width: 179px;
+  height: 38px;
+  margin-bottom: 12px;
+}
+
+.mainmobile__imgs__op__container__opcon__card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.mainmobile__imgs__op__container__opcon__card span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  margin-left: 5px;
+}
+
+.mainmobile__imgs__op__container__opcon__card__img {
+  width: 25px;
+  height: 25px;
+}
+
+.mainmobile__imgs__op__container__opcon__card span span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  padding: 4px 15px;
+  border-radius: 60px;
+  margin-left: 5px;
+}
+
+.mainmobile__imgs__op__container__opcon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mainmobile__imgs__op__container__btns {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 25px;
+  margin-bottom: 24px;
+}
+
+.mainmobile__imgs__op__container__btns__back {
+  width: 167px;
+  height: 25px;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.mainmobile__imgs__op__container__btns__back span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.mainmobile__imgs__op__container__btns__back__img {
+  width: 25px;
+  height: 25px;
+}
+
+.mainmobile__imgs__op__container__btns__fullscreen {
+  background: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 112px;
+height: 25px;
+}
+
+.mainmobile__imgs__op__container__btns__fullscreen span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.mainmobile__imgs__op__container__btns__fullscreen__img {
+  width: 25px;
+  height: 25px;
+}
+
+
+
+
+.bck{
+  background: #ffffff;
+}

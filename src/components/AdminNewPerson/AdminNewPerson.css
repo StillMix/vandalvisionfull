@@ -1,0 +1,291 @@
+.adminnewperson {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.adminnewperson.in {
+  opacity: 1;
+}
+
+.adminnewperson.out {
+  opacity: 0;
+}
+
+.adminnewperson__popup {
+  border-radius: 20px;
+  background: #0077FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adminnewperson__popup__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.adminnewperson__popup__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.adminnewperson__popup__form__input {
+  border-radius: 140px;
+  background: #fff;
+  color: #0077FF;
+}
+
+.adminnewperson__popup__form__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adminnewperson__popup__form__container__btn {
+  display: flex;
+  align-items: center;
+}
+
+.adminnewperson__popup__form__container__btn__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+@media screen and (min-width: 1920px) {
+  .adminnewperson__popup {
+    width: 745px;
+    height: 323px;
+  }
+
+  .adminnewperson__popup__title {
+    font-size: 30px;
+    width: 685px;
+    margin-top: 20px;
+  }
+
+  .adminnewperson__popup__subtitle {
+    font-size: 20px;
+    width: 685px;
+    margin-top: 10px;
+  }
+
+  .adminnewperson__popup__form {
+    width: 685px;
+    margin-top: 40px;
+  }
+
+  .adminnewperson__popup__form__input {
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+  }
+
+  .adminnewperson__popup__form__input:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .adminnewperson__popup__form__container {
+    margin-top: 20px;
+    width: 685px;
+  }
+
+  .adminnewperson__popup__form__container__btn {
+    height: 30px;
+  }
+
+  .adminnewperson__popup__form__container__btn__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .adminnewperson__popup__form__container__btn__span {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .adminnewperson__popup {
+    width: 745px;
+    height: 323px;
+  }
+
+  .adminnewperson__popup__title {
+    font-size: 30px;
+    width: 685px;
+    margin-top: 20px;
+  }
+
+  .adminnewperson__popup__subtitle {
+    font-size: 20px;
+    width: 685px;
+    margin-top: 10px;
+  }
+
+  .adminnewperson__popup__form {
+    width: 685px;
+    margin-top: 40px;
+  }
+
+  .adminnewperson__popup__form__input {
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+  }
+
+  .adminnewperson__popup__form__input:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .adminnewperson__popup__form__container {
+    margin-top: 20px;
+    width: 685px;
+  }
+
+  .adminnewperson__popup__form__container__btn {
+    height: 30px;
+  }
+
+  .adminnewperson__popup__form__container__btn__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .adminnewperson__popup__form__container__btn__span {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .adminnewperson__popup {
+    width: 745px;
+    height: 323px;
+  }
+
+  .adminnewperson__popup__title {
+    font-size: 30px;
+    width: 685px;
+    margin-top: 20px;
+  }
+
+  .adminnewperson__popup__subtitle {
+    font-size: 20px;
+    width: 685px;
+    margin-top: 10px;
+  }
+
+  .adminnewperson__popup__form {
+    width: 685px;
+    margin-top: 40px;
+  }
+
+  .adminnewperson__popup__form__input {
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+  }
+
+  .adminnewperson__popup__form__input:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .adminnewperson__popup__form__container {
+    margin-top: 20px;
+    width: 685px;
+  }
+
+  .adminnewperson__popup__form__container__btn {
+    height: 30px;
+  }
+
+  .adminnewperson__popup__form__container__btn__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .adminnewperson__popup__form__container__btn__span {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .adminnewperson {
+    align-items: end;
+  }
+  .adminnewperson__popup {
+    border-radius: 20px 20px 0 0;
+    width: 100vw;
+    height: 306px;
+  }
+
+  .adminnewperson__popup__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 25px;
+    color: #fff;
+    width: 724px;
+    margin-top: 46px;
+  }
+
+  .adminnewperson__popup__subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    width: 724px;
+    margin-top: 5px;
+  }
+
+  .adminnewperson__popup__form {
+    width: 724px;
+    margin-top: 20px;
+  }
+
+  .adminnewperson__popup__form__input {
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+  }
+
+  .adminnewperson__popup__form__input:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .adminnewperson__popup__form__container {
+    margin-top: 20px;
+    width: 724px;
+  }
+
+  .adminnewperson__popup__form__container__btn {
+    border-radius: 140px;
+    width: 356px;
+    background: #414141;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+  }
+
+  .adminnewperson__popup__form__container__btn__img {
+    display: none;
+  }
+
+  .adminnewperson__popup__form__container__btn__span {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+}

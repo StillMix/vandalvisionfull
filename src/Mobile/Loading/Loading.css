@@ -1,0 +1,44 @@
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Адаптивная ширина */
+    height: 100vh; /* Адаптивная высота */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0077FF;
+    z-index: 500;
+  }
+  
+  .loading__load {
+    position: relative;
+    width: 78.89%; /* Примерно 604.67px на экране 1920px (604.67 / 1920 * 100) */
+    background: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    background-size: 200% 100%; 
+    mask-image: url('../../images/Loading/logo.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    animation: loadingAnimation 3s infinite linear;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
+  
+  .loading__logo {
+    display: none;
+  }
+  

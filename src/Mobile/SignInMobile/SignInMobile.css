@@ -1,0 +1,232 @@
+@keyframes opInMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opOutMobile {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes widthInMobile {
+  from {
+    width: 100vw;
+    height: 576px;
+  }
+  to {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@keyframes widthOutMobile {
+  from {
+    width: 100vw;
+    height: 100vh;
+  }
+  to {
+    width: 100vw;
+    height: 576px;
+  }
+}
+
+.signinmobile__start.fade-in {
+  animation: opInMobile 0.7s ease-in-out forwards;
+}
+
+.signinmobile__start.fade-out {
+  animation: opOutMobile 0.7s ease-in-out forwards;
+}
+
+.signinmobile__popup.fade-in {
+  animation: widthInMobile 1s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+
+.signinmobile__popup.fade-out {
+  animation: widthOutMobile 0.7s ease-in-out forwards;
+}
+
+.signinmobile {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.signinmobile__popup {
+  border-radius: 20px;
+  width: 100vw;
+  height: 576px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.signinmobile__popup__containerTitle {
+  width: 319px;
+}
+
+.signinmobile__popup__containerTitle__con__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 30px;
+  color: #0077FF;
+  width: 319px;
+  height: 114px;
+  margin-top: 20px;
+}
+
+.signinmobile__start {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signinmobile__popup__containerTitle__con__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  color: #0077FF80;
+}
+
+.signinmobile__popup__containerInput {
+  width: 318px;
+  height: 110px;
+  margin-top: 82px;
+}
+
+.signinmobile__popup__containerInput__label {
+  border-radius: 140px;
+  width: 318px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.signinmobile__popup__containerInput__label:last-of-type {
+  margin-top: 10px;
+}
+
+.signinmobile__popup__containerInput__label__img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.signinmobile__popup__containerInput__label__input {
+  border-radius: 140px;
+  width: 318px;
+  height: 50px;
+  padding-left: 60px;
+  background: #0077FF;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.signinmobile__popup__containerInput__label__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.signinmobile__popup__containerBtns {
+  margin-top: 10px;
+}
+
+.signinmobile__popup__containerBtns__btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #e74b4b;
+  width: 167px;
+  height: 30px;
+}
+
+.signinmobile__popup__containerBtns__btn__img {
+  width: 30px;
+  height: 30px;
+}
+
+.signinmobile__popup__containerBtns__btnsub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #2bc6b3;
+  margin-top: 10px;
+  width: 227px;
+  height: 30px;
+}
+
+.signinmobile__popup__containerBtns__btnsub__img {
+  width: 30px;
+  height: 30px;
+}
+
+.signinmobile__copyrite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 0;
+  width: 181px;
+  height: 33px;
+  bottom: 20px;
+  justify-content: center;
+}
+
+.signinmobile__copyrite__img {
+  width: 121.8px;
+  height: 11.82px;
+  object-fit: contain;
+}
+
+.signinmobile__copyrite__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  color: #ffffff33;
+}
+
+.signinmobile__popup__containerTitle__navlink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #0077FF;
+  width: 161px;
+  height: 30px;
+  position: absolute;
+  bottom: 26px;
+}

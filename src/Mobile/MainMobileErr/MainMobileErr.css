@@ -1,0 +1,28 @@
+.mainmobile__err {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    border-radius: 1.04vw;
+  }
+  
+  .mainmobile__err__title {
+    color: #0077FF;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .mainmobile__err__back__btn {
+    background: transparent;
+    font-family: var(--font-family);
+    color: #0077FF;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 20px;
+    right: 20px;
+  }

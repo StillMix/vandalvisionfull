@@ -1,0 +1,75 @@
+.popupOpenImgMobile {
+  position: absolute;
+  z-index: 501;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Темный фон для лучшего фокуса на изображении */
+}
+
+.popupOpenImgMobile__img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+.popupOpenImgMobile__op__containerBtn__btn {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+
+  background: #e74b4b;
+
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+.popupOpenImgMobile__op__containerBtn__btndown{
+  background: transparent;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  position: absolute;
+  bottom: 65px;
+  right: 40px;
+
+  background: #e74b4b;
+
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.popupOpenImgMobile__op__containerBtn__btn__img {
+  width: 30px;
+  height: 30px;
+}
+
+.popupOpenImgMobile__op__containerBtn__btn span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+
+.popupOpenImgMobile__op__containerBtn__btndown span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 10px;
+}

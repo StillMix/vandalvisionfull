@@ -1,0 +1,503 @@
+@keyframes opInMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opOutMobile {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes widthOutMobile {
+  from {
+    width: 100vw;
+    height: 100vh;
+  }
+  to {
+    width: 100vw;
+    height: 576px;
+  }
+}
+
+@keyframes MenuInMobile {
+  from {
+    margin-right: -73vw;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes MenuOutMobile {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: -73vw;
+  }
+}
+
+.adminmobile__popup.fade-out {
+  animation: widthOutMobile 0.7s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.adminmobile__start.fade-in {
+  animation: opInMobile 0.7s ease-in-out forwards;
+}
+
+.adminmobile__start.fade-out {
+  animation: opOutMobile 0.7s ease-in-out forwards;
+}
+
+.adminmobile {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.adminmobile__popup {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.adminmobile__start {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.adminmobile__start__header {
+  width: 88.89vw;
+  margin-top: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adminmobile__start__header__title {
+  width: 225px;
+  height: 26px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #0077FF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.adminmobile__start__header__title span {
+  width: 41px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: #0077FF;
+  border: 3px solid #0077FF;
+  border-radius: 60px;
+}
+
+.adminmobile__start__header__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #e74b4b;
+  width: 25px;
+  height: 25px;
+}
+
+.adminmobile__start__header__btn__img {
+  width: 25px;
+  height: 25px;
+}
+
+.adminmobile__start__btns {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 88.89vw;
+  height: 48px;
+  margin-top: 16px;
+}
+
+.adminmobile__start__btns__input {
+  border-radius: 140px;
+  background: #0077FF;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: white;
+  border-radius: 140px;
+  width: 88.89vw;
+  height: 48px;
+  padding-left: 20px;
+}
+
+.adminmobile__start__btns__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.adminmobile__start__btns__new {
+  border-radius: 140px;
+  background: #0077FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminmobile__start__btns__new__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.adminmobile__start__btns__person {
+  border-radius: 140px;
+  background: #0077FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminmobile__start__btns__person__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.adminmobile__start__cards {
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 88.89vw;
+  gap: 10px;
+  margin-top: 19.52px;
+  padding-bottom: 20px;
+}
+
+.adminmobile__start__cards::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+    position: absolute;
+    right: 0;
+    z-index: 3000;
+}
+
+
+
+.adminmobile__start__cards__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #0077FF;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 88.89vw;
+  height: 18.5vh;
+  position: relative;
+}
+
+.adminmobile__start__cards__card_backimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #0077FF33;
+  border-radius: 20px;
+}
+
+.adminmobile__start__cards__card__conimg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg, rgba(36, 36, 36, 0) 0%, #0077FF 100%);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.adminmobile__start__cards__card__opcon {
+  text-align: left;
+  position: absolute;
+  z-index: 3;
+  top: 1.8vh;
+  left: 18px;
+}
+
+.adminmobile__start__cards__card__opcon__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.adminmobile__start__cards__card__opcon_op {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 1.4vh;
+  width: 269px;
+  height: 6.15vh;
+  justify-content: space-between;
+}
+
+.adminmobile__start__cards__card__opcon_op__containerone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 96px;
+  height: 6.15vh;
+}
+
+.adminmobile__start__cards__card__opcon_op__containerone__text {
+  display: flex;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  align-self: center;
+  width: 96px;
+}
+
+.adminmobile__start__cards__card__opcon_op__containerone__text__img {
+  width: 20px;
+  height: 20px;
+}
+
+.adminmobile__start__cards__card__opcon_op__containerone__text__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  margin-left: 5px;
+}
+
+.adminmobile__start__cards__card__opcon_op__containertwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 149px;
+  height: 6.15vh;
+}
+
+.adminmobile__start__cards__card__opcon_op__containertwo__text {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 149px;
+}
+
+.adminmobile__start__cards__card__opcon_op__containertwo__text__img {
+  width: 20px;
+  height: 20px;
+}
+
+.adminmobile__start__cards__card__opcon_op__containertwo__text__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  margin-left: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.adminmobile__start__cards__card__opcon_op__containertwo__text__span__diff {
+  display: block;
+  border-radius: 60px;
+  width: 60px;
+  height: 20px;
+  margin-left: 5px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adminmobile__start__cards__card__opcon__btns {
+  display: flex;
+  margin-top: 1.2vh;
+  width: 282px;
+  height: 30px;
+
+  justify-content: space-between;
+}
+
+.adminmobile__start__cards__card__opcon__btns__btn {
+  border-radius: 140px;
+  padding: 0vh 6vw;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  background: #0077FF;
+}
+
+/**/
+.adminmobile__copyrite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+}
+
+.adminmobile__copyrite__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.adminmobile__popup__menu {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  justify-content: right;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+  opacity: 0;
+}
+
+.adminmobile__popup__menu.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.adminmobile__popup__menu__popup {
+  border-radius: 20px 0 0 20px;
+  width: 73vw;
+  height: 100vh;
+  background: #0077FF;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  margin-right: -73vw;
+}
+
+.adminmobile__popup__menu__popup.open {
+  animation: MenuInMobile 0.7s ease-in-out forwards;
+}
+
+.adminmobile__popup__menu__popup.close {
+  animation: MenuOutMobile 0.7s ease-in-out forwards;
+}
+
+.adminmobile__popup__menu__popup__btn {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 41px;
+  right: 20px;
+}
+.adminmobile__popup__menu__popup__btn__img {
+  width: 25px;
+  height: 25px;
+}
+
+.adminmobile__popup__menu__popup__con {
+  width: 223px;
+  height: 158px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 17px;
+}
+
+.adminmobile__popup__menu__popup__con__tip {
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 60px;
+  width: 167px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+.adminmobile__popup__menu__popup__con__btn {
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.adminmobile__popup__menu__popup__con__btn__img {
+  width: 25px;
+  height: 25px;
+}
+
+.adminmobile__popup__menu__popup__con__btn__span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.adminmobile__popup__menu__popup__con__btn:nth-child(4)
+  .adminmobile__popup__menu__popup__con__btn__span {
+  color: #e74b4b;
+}
+
+.adminmobile__copyrite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: static;
+  z-index: 1;
+}
+
+.adminmobile__copyrite__img {
+  width: 131px;
+  height: 13px;
+}
+
+.adminmobile__copyrite__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.2);
+  margin-top: 7px;
+  margin-bottom: 20px;
+}

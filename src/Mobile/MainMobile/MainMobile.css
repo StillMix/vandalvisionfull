@@ -1,0 +1,293 @@
+@keyframes opInMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opOutMobile {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInMobile {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes fadeOutMobile {
+  from {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  to {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+/* Анимация всплывающего окна */
+@keyframes slideUpMobile {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownMobile {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideUpMobileImg {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideDownMobileImg {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.mainmobile__start.fade-in {
+  animation: opInMobile 0.7s ease-in-out forwards;
+}
+
+.mainmobile__start.fade-out {
+  animation: opOutMobile 0.7s ease-in-out forwards;
+}
+
+.mainmobile__loading.fade-in {
+  animation: opInMobile 0.7s forwards;
+}
+
+.mainmobile__loading.fade-out {
+  animation: opOutMobile 0.7s forwards;
+}
+
+.mainmobile__imgs__op.slideDownMobileImg {
+  animation: opInMobile 0.5s forwards;
+}
+
+.mainmobile__imgs__op.slideUpMobileImg {
+  animation: opOutMobile 0.5s forwards;
+}
+
+.mainmobile__err.fade-in {
+  animation: opInMobile 0.7s forwards;
+}
+
+.mainmobile__err.fade-out {
+  animation: opOutMobile 0.7s forwards;
+}
+
+.mainmobile__imgs__img.slideDownMobileImg {
+  animation: slideDownMobileImg 0.5s forwards;
+}
+
+.mainmobile__imgs__img.slideUpMobileImg {
+  animation: slideUpMobileImg 0.5s forwards;
+}
+
+.mainmobile__loading__err.fade-in {
+  animation: opInMobile 0.7s forwards;
+}
+
+.for758 {
+  display: none;
+}
+
+.mainmobile {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainmobile__popup {
+  border-radius: 20px;
+  width: 100vw;
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.mainmobile__popup_vis {
+  border-radius: 20px;
+  width: 100vw;
+  height: 576px;
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+
+.mainmobile__popup__containerTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainmobile__popup__containerTitle__con__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 30px;
+  color: #0077FF;
+  width: 319px;
+  margin-top: 20px;
+}
+
+.mainmobile__popup__containerTitle__con__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(0, 119, 255, 0.502);
+  margin-top: 10px;
+}
+
+.mainmobile__popup__containerTitle__navlink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #2bc6b3;
+  width: 227px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.mainmobile__popup__containerInput {
+  width: 319px;
+}
+
+.mainmobile__popup__containerInput__input {
+  border-radius: 140px;
+  width: 319px;
+  height: 50px;
+  background: #0077FF;
+  padding-left: 30px; /* Примерно 30px */
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  margin-top: 110px;
+  color: #fff;
+}
+
+.mainmobile__popup__containerInput__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #ffffff33;
+}
+
+.mainmobile__popup__containerInput__btn {
+  cursor: pointer;
+  border-radius: 140px;
+  width: 319px;
+  height: 50px;
+  background: #0077FF;
+  margin-top: 15px;
+}
+
+.mainmobile__popup__containerInput__btn__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.mainmobile__popup__containerBtns {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.mainmobile__popup__containerBtns__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  color: rgba(0, 119, 255, 0.5);
+  position: absolute;
+  bottom: 20px;
+}
+
+.mainmobile__popup__containerBtns__title__img {
+  width: 20px;
+  height: 20px;
+}
+
+.mainmobile__popup__containerBtns__btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #e74b4b;
+  width: 141px;
+  height: 30px;
+}
+
+.mainmobile__copyrite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 0;
+  width: 181px;
+  height: 33px;
+  bottom: 20px;
+  justify-content: center;
+}
+
+.mainmobile__copyrite__img {
+  width: 121.8px;
+  height: 11.82px;
+  object-fit: contain;
+}
+
+.mainmobile__copyrite__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.2);
+}

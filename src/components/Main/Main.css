@@ -1,0 +1,670 @@
+@keyframes opIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  to {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+/* Анимация всплывающего окна */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideUpImg {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideDownImg {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+.main__start.fade-in {
+  animation: opIn 0.7s ease-in-out forwards;
+}
+
+.main__start.fade-out {
+  animation: opOut 0.7s ease-in-out forwards;
+}
+
+.main__loading.fade-in {
+  animation: opIn 0.7s forwards;
+}
+
+.main__loading.fade-out {
+  animation: opOut 0.7s forwards;
+}
+
+.main__imgs__op.slideDownImg {
+  animation: opIn 0.5s forwards;
+}
+
+.main__imgs__op.slideUpImg {
+  animation: opOut 0.5s forwards;
+}
+
+.main__err.fade-in {
+  animation: opIn 0.7s forwards;
+}
+
+.main__err.fade-out {
+  animation: opOut 0.7s forwards;
+}
+
+.main__imgs__img.slideDownImg {
+  animation: slideDownImg 0.5s forwards;
+}
+
+.main__imgs__img.slideUpImg {
+  animation: slideUpImg 0.5s forwards;
+}
+
+.main__loading__err.fade-in {
+  animation: opIn 0.7s forwards;
+}
+
+.for758 {
+  display: none;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__popup {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__popup_vis {
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+
+.main__popup__containerTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__popup__containerTitle__con__title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 50px; /* Примерно 50px на экране 1920px */
+  color: #0077ff;
+}
+
+.main__popup__containerTitle__con__subtitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px; /* Примерно 20px */
+  color: #0077ff93;
+}
+
+.main__popup__containerTitle__navlink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #2bc6b3;
+}
+
+.main__popup__containerInput {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__popup__containerInput__input {
+  border-radius: 140px; /* 140px */
+  background: #0077ff;
+  padding-left: 30px; /* Примерно 30px */
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #fff;
+}
+
+.main__popup__containerInput__input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #ffffff95;
+}
+
+.main__popup__containerInput__btn {
+  cursor: pointer;
+  border-radius: 140px; /* 140px */
+  background: #0077ff;
+}
+
+.main__popup__containerBtns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__popup__containerBtns__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #0077ff93;
+}
+
+.main__popup__containerBtns__btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px; /* Примерно 14px */
+  color: #e74b4b;
+}
+
+.main__copyrite {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+}
+
+.main__copyrite__text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 13px;
+  color: #ffffffa0;
+}
+
+.main__popup__containerInput__btn__text {
+  display: none;
+}
+
+@media screen and (min-width: 1920px) {
+  .for768{
+    display: none;
+  }
+  .main__popup {
+    width: 865px;
+    height: 576px;
+  }
+
+  .main__popup_vis {
+    width: 865px;
+    height: 576px;
+  }
+
+  .main__popup__containerTitle {
+    width: 805px; /* Примерно 805px на экране 1920px */
+    height: 224px; /* Примерно 189px на экране 1080px */
+    margin-top: 30px; /* 30px */
+  }
+
+  .main__popup__containerTitle__con__title {
+    width: 424px; /* Примерно 424px */
+  }
+
+  .main__popup__containerTitle__con__subtitle {
+    margin-top: 10px;
+  }
+
+  .main__popup__containerTitle__navlink {
+    width: 227px; /* Примерно 227px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerTitle__navlink__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main__popup__containerInput {
+    width: 804px;
+    height: 50px;
+    margin-top: 182px; /* Примерно 182px */
+  }
+
+  .main__popup__containerInput__input {
+    width: 665px; /* Примерно 665px */
+    height: 50px; /* Примерно 50px */
+    padding-left: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerInput__btn {
+    border-radius: 140px; /* 140px */
+    width: 108px; /* Примерно 108px */
+    height: 50px; /* Примерно 50px */
+  }
+
+  .main__popup__containerInput__btn__img {
+    width: 31px;
+    height: 30px;
+  }
+
+  .main__popup__containerBtns {
+    width: 805px; /* Примерно 805px */
+    height: 30px; /* Примерно 30px */
+    margin-top: 30px; /* 30px */
+  }
+
+  .main__popup__containerBtns__title {
+    width: 398px; /* Примерно 398px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__title__img {
+    width: 30px; /* 30px */
+    height: 30px; /* 30px */
+  }
+
+  .main__popup__containerBtns__btn {
+    width: 141px; /* Примерно 141px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__btn__img {
+    width: 31px; /* Примерно 31px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__copyrite {
+    width: 247px;
+    height: 52px;
+    bottom: 40px;
+    gap: 14px;
+  }
+
+  .main__copyrite__img {
+    width: 212px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .for768{
+    display: none;
+  }
+  .main__popup {
+    width: 865px;
+    height: 576px;
+  }
+
+  .main__popup_vis {
+    width: 865px;
+    height: 576px;
+  }
+
+  .main__popup__containerTitle {
+    width: 805px; /* Примерно 805px на экране 1920px */
+    height: 224px; /* Примерно 189px на экране 1080px */
+    margin-top: 30px; /* 30px */
+  }
+
+  .main__popup__containerTitle__con__title {
+    width: 424px; /* Примерно 424px */
+  }
+
+  .main__popup__containerTitle__con__subtitle {
+    margin-top: 10px;
+  }
+
+  .main__popup__containerTitle__navlink {
+    width: 227px; /* Примерно 227px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerTitle__navlink__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main__popup__containerInput {
+    width: 804px;
+    height: 50px;
+    margin-top: 182px; /* Примерно 182px */
+  }
+
+  .main__popup__containerInput__input {
+    width: 665px; /* Примерно 665px */
+    height: 50px; /* Примерно 50px */
+    padding-left: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerInput__btn {
+    border-radius: 140px; /* 140px */
+    width: 108px; /* Примерно 108px */
+    height: 50px; /* Примерно 50px */
+  }
+
+  .main__popup__containerInput__btn__img {
+    width: 31px;
+    height: 30px;
+  }
+
+  .main__popup__containerBtns {
+    width: 805px; /* Примерно 805px */
+    height: 30px; /* Примерно 30px */
+    margin-top: 30px; /* 30px */
+  }
+
+  .main__popup__containerBtns__title {
+    width: 398px; /* Примерно 398px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__title__img {
+    width: 30px; /* 30px */
+    height: 30px; /* 30px */
+  }
+
+  .main__popup__containerBtns__btn {
+    width: 141px; /* Примерно 141px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__btn__img {
+    width: 31px; /* Примерно 31px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__copyrite {
+    width: 247px;
+    height: 52px;
+    bottom: 40px;
+    gap: 14px;
+    display: none;
+  }
+
+  .main__copyrite__img {
+    width: 212px;
+    height: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .for768{
+    display: none;
+  }
+  .main__popup {
+    width: 865px;
+    height: 576px;
+  }
+
+  .main__popup_vis {
+    width: 865px;
+    height: 576px;
+  }
+
+  .main__popup__containerTitle {
+    width: 805px; /* Примерно 805px на экране 1920px */
+    height: 224px; /* Примерно 189px на экране 1080px */
+    margin-top: 30px; /* 30px */
+  }
+
+  .main__popup__containerTitle__con__title {
+    width: 424px; /* Примерно 424px */
+  }
+
+  .main__popup__containerTitle__con__subtitle {
+    margin-top: 10px;
+  }
+
+  .main__popup__containerTitle__navlink {
+    width: 227px; /* Примерно 227px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerTitle__navlink__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main__popup__containerInput {
+    width: 804px;
+    height: 50px;
+    margin-top: 182px; /* Примерно 182px */
+  }
+
+  .main__popup__containerInput__input {
+    width: 665px; /* Примерно 665px */
+    height: 50px; /* Примерно 50px */
+    padding-left: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerInput__btn {
+    border-radius: 140px; /* 140px */
+    width: 108px; /* Примерно 108px */
+    height: 50px; /* Примерно 50px */
+  }
+
+  .main__popup__containerInput__btn__img {
+    width: 31px;
+    height: 30px;
+  }
+
+  .main__popup__containerBtns {
+    width: 805px; /* Примерно 805px */
+    height: 30px; /* Примерно 30px */
+    margin-top: 30px; /* 30px */
+  }
+
+  .main__popup__containerBtns__title {
+    width: 398px; /* Примерно 398px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__title__img {
+    width: 30px; /* 30px */
+    height: 30px; /* 30px */
+  }
+
+  .main__popup__containerBtns__btn {
+    width: 141px; /* Примерно 141px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__btn__img {
+    width: 31px; /* Примерно 31px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__copyrite {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .for1024 {
+    display: none;
+  }
+  .for768 {
+    display: block;
+  }
+  .main__popup {
+    width: 646px;
+    height: 513px;
+  }
+
+  .main__popup_vis {
+    width: 646px;
+    height: 513px;
+  }
+
+  .main__popup__containerTitle {
+    width: 534px; /* Примерно 805px на экране 1920px */
+    height: 68px; /* Примерно 189px на экране 1080px */
+    margin-top: 56px; /* 30px */
+    display: block;
+  }
+
+  .main__popup__containerTitle__con__title {
+    font-size: 30px;
+    width: 534px; /* Примерно 424px */
+  }
+
+  .main__popup__containerTitle__con__subtitle {
+    margin-top: 5px;
+    font-size: 20px;
+  }
+
+  .main__popup__containerTitle__navlink {
+    width: 227px; /* Примерно 227px */
+    height: 30px; /* Примерно 30px */
+    margin-top: 10px;
+  }
+
+  .main__popup__containerTitle__navlink__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main__popup__containerInput {
+    width: 607px;
+    height: 110px;
+    flex-direction: column;
+    margin-top: 135px; /* Примерно 182px */
+  }
+
+  .main__popup__containerInput__input {
+    width: 606px;
+    height: 50px;
+    padding-left: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerInput__btn {
+    border-radius: 140px; /* 140px */
+    margin-top: 10px;
+    width: 606px;
+    height: 50px;
+  }
+  .main__popup__containerInput__btn__text {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+  }
+  .main__popup__containerInput__btn__img {
+    display: none;
+    width: 31px;
+    height: 30px;
+  }
+
+  .main__popup__containerBtns {
+    width: 281px; /* Примерно 805px */
+    height: 114px; /* Примерно 30px */
+    margin-top: 10px; /* 30px */
+    display: block;
+    position: relative;
+  }
+
+  .main__popup__containerBtns__title {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    width: 281px; /* Примерно 398px */
+    height: 20px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__title__img {
+    width: 20px; /* 30px */
+    height: 20px; /* 30px */
+  }
+
+  .main__popup__containerBtns__btn {
+    margin-top: 0;
+    width: 141px; /* Примерно 141px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__popup__containerBtns__btn__img {
+    width: 31px; /* Примерно 31px */
+    height: 30px; /* Примерно 30px */
+  }
+
+  .main__copyrite {
+    display: none;
+    width: 247px;
+    height: 52px;
+    bottom: 40px;
+    gap: 14px;
+  }
+
+  .main__copyrite__img {
+    width: 212px;
+    height: 22px;
+  }
+}
